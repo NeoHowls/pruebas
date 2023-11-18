@@ -76,16 +76,12 @@ WSGI_APPLICATION = 'Django_S4PBG6.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.mysql",
-        "NAME": conf['db'],
-        "USER": conf['user'],
-        "PASSWORD": conf['password'],
-        "HOST": conf['host'],
-        "PORT": conf['port'],
-        "OPTIONS": {
-            "autocommit": True,
-        },
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'pnk_security',
+        'HOST': "matia2023.cscgkvuxigqq.us-east-1.rds.amazonaws.com",
+        'USER' : 'admin',
+        'PASSWORD' : '1234567890',
     }
 }
 
