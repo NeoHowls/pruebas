@@ -1,0 +1,22 @@
+{# Plantilla base #}{% extends '../layouts/base.html' %}
+{# Cargar assets #}{% load static %}
+{# Título de la página #} {% block title %}Confirmar rechazo{% endblock %}
+
+        {% block content %}
+        <div class="center-container">
+            <div class="center-container__title">
+                <h1>Rechazar solicitud de nuevo usuario</h1>
+            </div>
+            <div class="center-container__body">
+                <p>¿Realmente desea rechazar la solicitud de <b>{{ user_inactive.first_name|title }} {{ user_inactive.last_name|title }}?</b></p>
+                <div class="button-box2">
+                    {# Botón - Rechazar #}
+                    {% with user_id=user_inactive.id %}
+                    <a href="{% url 'website-ruta_delete_user_function' user_id %}" class="button back_blue white" type="submit"><i class="fa-solid fa-check white"></i> Rechazar</a>
+                    {% endwith %}
+                    {# Botón - Cancelar #}
+                    <button id="back_btn" class="button back_red white" type="button"><i class="fa-solid fa-xmark white"></i> Cancelar</button>
+                </div>
+            </div>
+        </div>
+        {% endblock  %}

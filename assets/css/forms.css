@@ -1,0 +1,139 @@
+/* FORMULARIOS */
+
+/*---Formulario tipo 1---*/
+/* Tarjeta */
+.access_form__card {
+    display: flex;
+    flex-direction: column;
+    min-width: 400px;
+    box-shadow: 10px 10px 30px var(--color-black);
+    background-color: white;
+    padding: 10px 30px;
+    gap: 30px;
+}
+/* Tarjeta 2 (más ancha) */
+.access_form__card2 {
+    display: flex;
+    flex-direction: column;
+    width: 1200px;
+    min-width: 900px;
+    box-shadow: 10px 10px 30px var(--color-black);
+    background-color: white;
+    padding: 10px 30px;
+    gap: 30px;
+}
+
+/* Encabezado de tarjeta (Logo, nombre del sistema) */
+.access_form__header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    gap: 15px;
+}
+.access_form__logo {
+    width: 40px;
+}
+
+/* Título de la plantilla */
+.access_form__title {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* Formulario */
+.access_form__content {
+    display: flex;
+    flex-direction: column;
+}
+/* Formulario 2 bloques*/
+.access_form__content2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.access_form__subcontent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 48%;
+}
+
+/* Subtítulo */
+.access_form__subtitle {
+    font-size: var(--fs-type-normal);
+}
+/* Inputs */
+.input-box input {
+    width: 100%;
+    height: 40px;
+    border-bottom: 1px solid var(--color-gray);
+    margin: 10px 0;
+    outline: none;
+    padding: 0 5px;
+}
+/* Selects */
+.input-box select {
+    cursor: pointer;
+    width: 100%;
+    height: 40px;
+    padding: 0 10px;
+    border-bottom: 1px solid var(--color-gray);
+    margin: 10px 0;
+    outline: none;
+}
+
+/* Footer de tarjeta */
+.access_form__footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 30px;
+}
+
+/* Contenedor Inputs */
+.input-box {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 15px;
+    padding: 0 20px;
+}
+/* Contenedor botones */
+.button-box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px 10px;
+    margin: 10px 0;
+    gap: 10px;
+}
+
+/* Icono de ojo para contraseña */
+.fa-eye-slash, .fa-eye {
+    position: absolute;
+    cursor: pointer;
+    right: 30px;
+}
+
+/* Ícono de validación */
+.checkIcon {
+    position: absolute;
+    display:inline;
+    right: 0;
+    color: #35f43f;
+}
+.checkIconHidden {
+    display: none !important;
+}

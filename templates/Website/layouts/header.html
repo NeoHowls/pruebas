@@ -1,0 +1,37 @@
+{# Cargar assets #}{% load static %}
+    <header class="header">
+        {# Marca del sistema #}
+        <div class="header__left">
+            <img class="header__logo" src="{% static 'images/logo.webp' %}" alt="">
+            <h3 class="header__title">Inventario</h3>
+        </div>
+
+        {# Panel de usuario #}
+        <div class="header__right">
+            {# Enlace Django Admin #}
+        {% if user.is_staff %}
+            <a class="header__admin white" href="{% url 'admin:index' %}"><i class="fa-solid fa-toolbox white"></i> Administrador</a>
+        {% endif %}
+            {# Cambiar tema #}
+            <div class="header__thememode">
+                <div class="back_white" id="switch-theme">
+                    <i class="fa-solid fa-moon switch-moon" style="color: #0080ff;"></i>
+                    <i class="fa-solid fa-sun switch-sun" style="color: #ffc140;"></i>
+                    <i class="indicator back_black"></i>
+                </div>
+            </div>
+            {# Información del sistema #}
+            <i class="fa-solid fa-circle-info" style="color: #0059b3;"></i>
+            {# Nombre del usuario #}
+            <span class="header__username">
+            {% if user.first_name and user.last_name %}
+                {{ user.first_name|title }} {{ user.last_name|title }}
+            {% else %}
+                {{ user.email }}
+            {% endif %}
+            </span>
+            <a href="{% url 'website-ruta_logout' %}" class="header__exit white"><i class="fa-solid fa-door-open white"></i> Salir</a>
+            {# Avatar (proximamente) #}
+            <img class="header__avatar" src="" alt="">
+        </div>
+    </header>

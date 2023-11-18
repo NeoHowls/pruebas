@@ -1,0 +1,29 @@
+/* Archivo para establecer parámetros base (Dimensiones, fuentes, colores) */
+@import url("base/reset.css");
+
+/* Main */
+@import url("base/main.css");
+
+/* Header */
+@import url("base/header.css");
+
+/* Navbar */
+@import url("base/nav.css");
+
+/* Footer */
+@import url("base/footer.css");
+
+/* Texto */
+@import url("text.css");
+
+/* Botones */
+@import url("buttons.css");
+
+/* Colores */
+@import url("colors.css");
+
+/* Formularios */
+@import url("forms.css");
+
+/* Tablas */
+@import url("tables.css");

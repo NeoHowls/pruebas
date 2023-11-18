@@ -1,0 +1,46 @@
+{# Plantilla base #}{% extends '../layouts/base.html' %}
+{# Cargar assets #}{% load static %}
+{# Título de la página #} {% block title %}Inicio{% endblock %}
+
+        {% block content %}
+        <div class="center-container">
+            <div class="center-container__title">
+                <h1>Nuevos usuarios esperando aprobación ({{ count_users }})</h1>
+            </div>
+            <table class="responsive-table1">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>RUT</th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Correo electrónico</th>
+                        <th>Rol indicado</th>
+                        <th>Estado</th>
+                        <th>Fecha</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for userMeta in inactive_users %}
+                    <tr>
+                        <td>{{ userMeta.user.id }}</td>
+                        <td>{{ userMeta.user.username }}</td>
+                        <td>{{ userMeta.user.first_name|title }}</td>
+                        <td>{{ userMeta.user.last_name|title }}</td>
+                        <td>{{ userMeta.user.email }}</td>
+                        <td>{{ userMeta.profiles.name|title }}</td>
+                        <td>{{ userMeta.status }}</td>
+                        <td>{{ userMeta.user.date_joined|date:"d/m/y H:i" }}</td>
+                        <td>
+                            {% with user_id=userMeta.user.id %}
+                            <a href="{% url 'website-ruta_approve_users_confirm' user_id %}" class="button_table back_green white"><i class="fa-solid fa-check white"></i> Aprobar</a>
+                            <a href="{% url 'website-ruta_approve_users_decline' user_id %}" class="button_table back_red white"><i class="fa-solid fa-xmark white"></i> Rechazar</a>
+                            {% endwith %}
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% endblock  %}

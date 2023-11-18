@@ -1,0 +1,74 @@
+{# Cargar assets #}{% load static %}
+<nav class="nav" id="nav">
+    <section class="nav__section">
+        <div class="nav__block2">
+            <a class="nav__option white home" href="{% url 'website-ruta_home' %}"><i class="fa-solid fa-house white"></i> Inicio</a>
+        </div>
+    </section>
+    <section class="nav__section">
+        <div class="nav__block">
+            <p class="nav__option white" href=""><i class="fa-solid fa-truck-ramp-box white"></i> Gestión de Inventario</p>
+            <i class="fa-solid fa-chevron-down white"></i>
+        </div>
+        <ul class="nav__list">
+            <li><a href="">Lista de insumos</a></li>
+            <li><a href="">Agregar insumo</a></li>
+            <li><a href="">Agregar por lote</a></li>
+            <li><a href="">Modificar insumo</a></li>
+            <li><a href="">Modificar por lote</a></li>
+            <li><a href="">Eliminar insumo</a></li>
+        {% for category in categories %}
+            <li><a href="">{{ category.name|title }}</a></li>
+        {% endfor %}
+        </ul>
+    </section>
+    <section class="nav__section">
+        <div class="nav__block">
+            <p class="nav__option white" href=""><i class="fa-solid fa-fire-extinguisher white"></i> Gestión de Operaciones</p>
+            <i class="fa-solid fa-chevron-down white"></i>
+        </div>
+        <ul class="nav__list">
+            <li><a href="">Lista de operaciones</a></li>
+            <li><a href="">Generar operación</a></li>
+        </ul>
+    </section>
+    <section class="nav__section">
+        <div class="nav__block">
+            <p class="nav__option white" href=""><i class="fa-solid fa-user white"></i> Usuarios</p>
+            <i class="fa-solid fa-chevron-down white"></i>
+        </div>
+        <ul class="nav__list">
+            <li><a href="{% url 'website-ruta_list_users' %}">Lista de usuarios</a></li>
+            <li><a href="{% url 'website-ruta_approve_users' %}">Aprobar usuarios</a></li>
+            <li><a href="{% url 'website-ruta_add_user' %}">Agregar usuario</a></li>
+        </ul>
+    </section>
+    <section class="nav__section">
+        <div class="nav__block">
+            <p class="nav__option white" href=""><i class="fa-solid fa-truck-front white"></i> Unidades</p>
+            <i class="fa-solid fa-chevron-down white"></i>
+        </div>
+        <ul class="nav__list">
+            <li><a href="">Lista de vehículos</a></li>
+            <li><a href="">Agregar vehículo</a></li>
+            <li><a href="">Modificar vehículo</a></li>
+            <li><a href="">Eliminar vehículo</a></li>
+        </ul>
+    </section>
+    <section class="nav__section">
+        <div class="nav__block">
+            <p class="nav__option white" href=""><i class="fa-solid fa-screwdriver-wrench white"></i> Mantenimiento</p>
+            <i class="fa-solid fa-chevron-down white"></i>
+        </div>
+        <ul class="nav__list">
+            <li><a href="">Planes de mantenimiento</a></li>
+            <li><a href="">Generar plan de mantenimiento</a></li>
+            <li><a href="">Mantenimiento por horas de uso</a></li>
+        </ul>
+    </section>
+    <section class="nav__section">
+        <div class="nav__block2">
+            <a class="nav__option white report" href=""><i class="fa-solid fa-print white"></i> Reporte</a>
+        </div>
+    </section>
+</nav>

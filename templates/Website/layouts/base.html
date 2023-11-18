@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!--Estilos-->{% include 'Website/layouts/styles.html' %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--Título de la página-->
+    <title>Inventario - {% block title %}{% endblock %}</title>
+    <!--Descripción-->
+    <meta name="description" content="Sistema de inventario diseñado para la Segunda Compañía de Bomberos de Iquique">
+</head>
+
+<body>
+    <!--Header-->{% include 'Website/layouts/header.html' %}
+    
+    <!--Contenido-->
+    <main class="main-box">
+        <!--Nav-->{% include 'Website/layouts/nav.html' %}
+        <section class="content-box">
+            <!--Flash-->{% include 'Website/layouts/flash.html' %}
+            {% block content %}{% endblock %}
+        </section>
+    </main>
+    
+    <!--Footer-->{% include 'Website/layouts/footer.html' %}
+
+    <!--Funciones JS-->{% include 'Website/layouts/scripts.html' %}
+    
+</body>
+
+</html>

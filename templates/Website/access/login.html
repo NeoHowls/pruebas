@@ -1,0 +1,38 @@
+{% extends '../layouts/base2.html' %}
+{# Cargar assets #}{% load static %}
+{% block title %}Iniciar sesión{% endblock %}
+
+        {% block content %}
+        <div class="access_form__card">
+            <div class="access_form__header">
+                <img class="access_form__logo" src="{% static 'images/logo.webp' %}" alt="">
+                <h3 class="access_form__name">Sistema de Inventario para la Segunda Compañía de Bomberos de Iquique</h3>
+            </div>
+            <h1 class="access_form__title">Iniciar sesión</h1>
+            <div class="access_form__content">
+                <form class="access_form__form" method="post" action="{% url 'website-ruta_login' %}">
+                    {# RUT (Nombre de usuario) #}
+                    <div class="input-box">
+                        <i class="fa-solid fa-user"></i>
+                        {{ form.rutField }}
+                    </div>
+                    {# Contraseña #}
+                    <div class="input-box">
+                        <i class="fa-solid fa-lock"></i>
+                        {{ form.passwordField }}
+                        <i id="eye-slash-icon" class="fa-solid fa-eye-slash"></i>
+                    </div>
+                    {# Caja de Botones #}
+                    <div class="button-box">
+                        {% csrf_token %}
+                        <button class="btn_flex back_blue white" type="submit">Entrar</button>
+                    </div>
+                </form>
+            </div>
+            <div class="access_form__footer">
+                <a href="">¿Olvidaste tu contraseña?</a>
+                <a href="{% url 'website-ruta_signup' %}">Crear cuenta</a>
+            </div>
+        </div>
+
+        {% endblock  %}

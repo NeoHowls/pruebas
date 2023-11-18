@@ -1,0 +1,59 @@
+/* COLORES */
+
+/*---Fondos de color---*/
+
+/* Negro */
+.back_black {
+    background-color: var(--color-black);
+}
+
+/* Blanco */
+.back_white {
+    background-color: var(--color-white);
+}
+
+/* Azul */
+.back_blue {
+    background-color: var(--color-blue);
+}
+.back_blue:hover {
+    background-color: var(--color-blue-hover);
+}
+
+/* Amarillo */
+.back_yellow {
+    background-color: var(--color-yellow);
+}
+
+/* Gris */
+.back_gray {
+    background-color: var(--color-gray);
+}
+
+/* Gris 2 */
+.back_gray2 {
+    background-color: var(--color-gray2);
+}
+
+/* Verde */
+.back_green {
+    background-color: var(--color-green);
+}
+.back_green:hover {
+    background-color: var(--color-green-hover);
+}
+
+/* Rojo */
+.back_red {
+    background-color: var(--color-red);
+}
+.back_red:hover {
+    background-color: var(--color-red-hover);
+}
+
+
+
+/*---Colores---*/
+.white {
+    color: var(--color-white);
+}

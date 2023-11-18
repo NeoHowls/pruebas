@@ -1,0 +1,39 @@
+/* BOTONES PERSONALIZADOS */
+
+/* Botón Flex */
+.btn_flex {
+    margin-top: 10px;
+    font-weight: 600;
+    width: 100%;
+    height: 40px;
+    border: 0;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
+/* Botón estándar */
+.button {
+    border: 0;
+    border-radius: 2rem;
+    cursor: pointer;
+    padding: 10px 20px;
+}
+.button_table {
+    border: 0;
+    border-radius: 15px;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+/* Label para cambiar tema */
+.check_theme {
+    width: 200px;
+    height: 100px;
+    background-color: red;
+}
+
+.button-box2 {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}

@@ -1,0 +1,88 @@
+/* Reset de margin, padding, border y box sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+
+}
+
+/* Ajuste de escala del font size por defecto del navegador a 10px */
+html {
+    font-size: 62.5%;
+}
+
+/* Definición de custom properties */
+:root{
+    /*Paleta de colores extraída de https://germaniaiquique.cl/*/
+    --color-black: #212121;
+    --color-sweet-black: #303030;
+    --color-white: #f0f0f0;
+    --color-yellow: #fbc900;
+    --color-blue: #2882f8;
+    --color-blue-hover: #28acf8;
+    --color-gray: #4a4d52;
+    --color-gray2: #7a7a7a;
+    --color-green: #61ce70;
+    --color-green-hover: #95f0a1;
+    --color-red: rgb(202, 66, 66);
+    --color-red-hover:rgb(238, 110, 110);
+
+
+    /* Tipografía */
+    --ff-type1: 'Roboto', 'Calibri';
+    --ff-type2: 'Poppins', 'Calibri';
+    --ff-type3: 'Open Sans', 'Calibri';
+    --fs-type-big: 2.2rem;
+    --fs-type-normal: 1.8rem;
+    --fs-type-small: 1.4rem;
+    --fs-type-1rem: 1rem;
+
+    /* Altura header */
+    --header-height: 70px;
+
+    /* Ancho Navbar */
+    --nav-width: 18%;
+
+    /* Altura de sección de navbar */
+    --nav-section-height: 50px;
+}
+
+/* Para evitar problemas de desbordamiento de videos e imágenes en contenedor o ventana */
+img, picture, video, iframe, figure {
+    max-width: 100%;
+}
+
+/* Quitar puntos en etiquetas <li> */
+li {
+    list-style-type: none;
+}
+
+/* Desactivar estilos por defecto de las principales etiquetas de texto */
+h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em {
+    font-size: var(--fs-type-1rem);
+    text-decoration: none;
+}
+
+/* Reset tablas */
+table, tr, td {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Configuramos la tipografía para toda la web */
+body {
+    position: relative;
+    min-height: 100vh;
+    font-family: var(--ff-type1);
+    font-size: var(--fs-type-normal);
+    color: var(--color-black);
+    background-color: var(--color-white);
+    transition: 0.2s;
+}
+
+/* Configuración del modo oscuro */
+body.darkmode {
+    color: var(--color-white);
+    background-color: var(--color-black);
+}

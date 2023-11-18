@@ -1,0 +1,22 @@
+{# Plantilla base #}{% extends '../layouts/base.html' %}
+{# Cargar assets #}{% load static %}
+{# Título de la página #} {% block title %}Confirmar Aprobación{% endblock %}
+
+        {% block content %}
+        <div class="center-container">
+            <div class="center-container__title">
+                <h1>Aprobar solicitud</h1>
+            </div>
+            <div class="center-container__body">
+                <p>¿Realmente desea aprobar la solicitud de <b>{{ user_inactive.first_name|title }} {{ user_inactive.last_name|title }}</b>? Una vez aprobado, el usuario podrá iniciar sesión y contará con todos los permisos de gestión especificados para su cargo.</p>
+                <div class="button-box2">
+                    {# Botón - Aprobar #}
+                    {% with user_id=user_inactive.id %}
+                    <a href="{% url 'website-ruta_active_user_function' user_id %}" class="button back_blue white"><i class="fa-solid fa-check white"></i> Aprobar</a>
+                    {% endwith %}
+                    {# Botón - Cancelar #}
+                    <button id="back_btn" class="button back_red white" type="button"><i class="fa-solid fa-xmark white"></i> Cancelar</button>
+                </div>
+            </div>
+        </div>
+        {% endblock  %}

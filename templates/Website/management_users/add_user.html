@@ -1,0 +1,84 @@
+{# Plantilla base #}{% extends '../layouts/base.html' %}
+{# Cargar assets #}{% load static %}
+{# Título de la página #} {% block title %}Agregar usuario{% endblock %}
+
+        {% block content %}
+        <div class="center-container">
+                <div class="center-container__title">
+                    <h1>Agregar usuario</h1>
+                </div>
+                <br>
+                <form method="post" action="">
+                        <br>
+                        <span class="subtitle">Información personal</span>
+                        {# Rut #}
+                        <div class="input-box">
+                            {{form.rutField}}
+                            <i id="check-rut" class="fa-solid fa-circle-check checkIconHidden"></i>
+                        </div>
+                        {# Nombre #}
+                        <div class="input-box">
+                            {{form.nameField}}
+                            <i id="check-name" class="fa-solid fa-circle-check checkIconHidden"></i>
+                        </div>
+                        {# Apellido #}
+                        <div class="input-box">
+                            {{form.lastNameField}}
+                            <i id="check-lastname" class="fa-solid fa-circle-check checkIconHidden"></i>
+                        </div>
+                        {# Correo electrónico #}
+                        <div class="input-box">
+                            {{form.emailField}}
+                            <i id="check-email" class="fa-solid fa-circle-check checkIconHidden"></i>
+                        </div>
+                        {# Contraseña #}
+                        <div class="input-box">
+                            {{form.passwordField}}
+                            <i id="eye-slash-icon" class="fa-solid fa-eye-slash"></i>
+                            <i id="check-password" class="fa-solid fa-circle-check checkIconHidden"></i>
+                        </div>
+                        {# Confirmar contraseña #}
+                        <div class="input-box">
+                            {{form.confirmPasswordField}}
+                            <i id="check-confirm_password" class="fa-solid fa-circle-check checkIconHidden"></i>
+                        </div>
+                        {# Número de teléfono #}
+                        <div class="input-box">
+                            {{form.numberField}}
+                            <i id="check-number" class="fa-solid fa-circle-check checkIconHidden"></i>
+                        </div>
+                        {# Perfil de usuario #}
+                        <div class="input-box">
+                            <select name="profile" id="selectProfile"></select>
+                            <i id="checkSelectProfile" class="fa-solid fa-circle-check checkIconHidden"></i>
+                        </div>
+                        <br>
+                        {# Estación de bomberos #}
+                        <span class="subtitle">Seleccionar Compañia</span>
+                        {# Región #}
+                        <div class="input-box">
+                            <select name="region" id="selectRegion"></select>
+                            <i id="checkSelectRegion" class="fa-solid fa-circle-check checkIconHidden"></i>
+                        </div>
+                        {# Comuna #}
+                        <div class="input-box">
+                            <select name="comune" id="selectComune"></select>
+                            <i id="checkSelectComune" class="fa-solid fa-circle-check checkIconHidden"></i>
+                        </div>
+                        {# Estación #}
+                        <div class="input-box">
+                            <select name="station" id="selectStation"></select>
+                            <i id="checkSelectStation" class="fa-solid fa-circle-check checkIconHidden"></i>
+                        </div>
+                        <br>
+                        {% csrf_token %}
+                        {# Caja de Botones #}
+                        <div class="button-box2">
+                            {# Botón - Crear #}
+                            <button id="signup-form-button" class="button back_blue white" type="submit">Crear usuario</button>
+                            {# Botón - Volver #}
+                            <button id="back_btn" class="button back_red white" type="button"><i class="fa-sharp fa-solid fa-delete-left"></i> Volver</button>
+                        </div>
+                </form>
+        </div>
+        {% endblock  %}

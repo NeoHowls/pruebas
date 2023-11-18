@@ -1,0 +1,50 @@
+/* ESTILOS DE LAS MAIN BOX */
+
+.main-box {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    padding-top: calc(var(--header-height));
+}
+
+.main-box2 {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: calc(var(--nav-width) + 20px);
+    padding-right: 20px;
+}
+/* Contenedor de template tipo 1 */
+.center-container {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    height: 100%;
+    margin: 0 auto;
+}
+.center-container__title {
+    display: flex;
+    width: 100%;
+    height: 150px;
+    justify-content: center;
+    align-items: center;
+}
+.center-container__body p{
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
